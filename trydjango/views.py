@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 import random
+from ywcoffee.models import Article
 
 def home_view(request):
 
