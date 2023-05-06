@@ -40,3 +40,4 @@ wrapt==1.15.0
 zipp==3.15.0
 django==4.2.1
 
+dataclasses==0.6
