@@ -1,5 +1,6 @@
 from django.http import HttpResponse
 import random
+from django.template.loader import render_to_string
 from ywcoffee.models import Article
 
 def home_view(request):
@@ -18,3 +19,8 @@ def home_view(request):
     <p>{article_obj.content}!</p>
     """.format(**context)
     return HttpResponse(HTML_STRING)
+
+def site_view(request):
+    
+    HTML_STRING1 = render_to_string("index.html")
+    return HttpResponse(HTML_STRING1)
