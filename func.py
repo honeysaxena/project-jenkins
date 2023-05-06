@@ -2,13 +2,13 @@ import cProfile
 import pstats
 import time
 
+
 def do_stuff():
-     
     # single line to find factorial
     result = []
     for i in range(100000):
-        result.append(i ** 2)
-    return result    
+        result.append(i**2)
+    return result
 
 
 if __name__ == "__main__":
@@ -21,5 +21,3 @@ if __name__ == "__main__":
     results = pstats.Stats(profile)
     results.sort_stats(pstats.SortKey.TIME)
     results.print_stats()
-
-
